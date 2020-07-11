@@ -4,7 +4,7 @@ const   express = require("express"),
 
 app.use(express.static("public"));
 
-const io = socket(app.listen(3000,()=>{
+const io = socket(app.listen(process.env.PORT || 3000,()=>{
     console.log("chat app connected");
 }))
 
